@@ -20,7 +20,8 @@ module.exports = (sequelize, Sequelize) => {
       },
       temperature: {
         type: Sequelize.STRING(3),
-        allowNull:true
+        allowNull:true,
+        defaultValue:"30"
       },
     });
   

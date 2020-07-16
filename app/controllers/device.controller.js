@@ -34,10 +34,10 @@ exports.create = (req, res) => {
 
 // Retrieve all Devices from the database.
 exports.findAll = (req, res) => {
-    // const device_name = req.query.device_name;
-    // var condition = device_name ? { device_name: { [Op.like]: `%${device_name}%` } } : null;
+    const device_name = req.query.device_name;
+    var condition = device_name ? { device_name: { [Op.like]: `%${device_name}%` } } : null;
   
-    Device.findAll()
+    Device.findAll({ where : condition })
       .then(data => {
         res.send(data);
       })
