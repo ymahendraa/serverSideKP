@@ -18,7 +18,7 @@ module.exports = app => {
     // Delete a Device with id
     router.delete("/:id", devices.delete);
   
-    // Create a new Device
+    // Delete all devices
     router.delete("/", devices.deleteAll);
   
     app.use('/api/devices', router);

@@ -8,12 +8,16 @@ module.exports = (sequelize, Sequelize) => {
         },
         user_name: {
             type: Sequelize.STRING(13),
-            allowNull:true
+            allowNull:false
         },
         phone_num : {
             type : Sequelize.STRING(13),
-            allowNull:true
-      }
+            allowNull:false
+        },
+        address : {
+            type : Sequelize.STRING(50),
+            allowNull : false
+        }
     });
   
     return User;
